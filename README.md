@@ -25,11 +25,13 @@ npm run check
 npm run build
 ```
 
-构建会清理并重新生成本项目的 `dist/`，仅复制 `index.html`、`styles.css`、`script.js` 及 `assets/` 网站资源，不会打包源码目录、开发脚本、Git 记录或环境文件。资源内的隐藏文件不会复制，符号链接会使构建终止。
+`npm run build` 是可选的打包命令，仅在其他静态托管平台要求单独提交部署目录时使用。它会清理并重新生成本项目的 `dist/`，只复制 `index.html`、`styles.css`、`script.js` 及 `assets/` 网站资源。GitHub Pages 无需运行此命令。
 
 ## 静态部署
 
-将 `dist/` 的全部内容上传到任意静态站点托管服务即可，无需应用服务器。也可以将本仓库根目录作为 GitHub Pages 的发布源；构建产物使用相对资源路径，可部署到项目子路径。
+此站点可由 GitHub Pages 直接发布仓库中的静态文件，无需运行 npm 构建。首次启用时，在 GitHub 仓库的 **Settings → Pages → Build and deployment** 中，将 **Source** 设为 **Deploy from a branch**，选择 **`master`** 和 **`/(root)`** 后保存。之后每次向 `master` 推送更改，GitHub Pages 会自动发布仓库根目录的 `index.html` 和网站资源。资源路径使用相对地址，可在仓库项目页下正常访问。
+
+其他静态托管平台若要求单独的部署目录，可以运行 `npm run build` 并部署 `dist/`。
 
 ## 项目结构
 
