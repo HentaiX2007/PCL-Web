@@ -79,7 +79,7 @@ h1 > span { color: #6b9fd6; }
 .plus-one { top: 8px; left: 10px; }
 .plus-two { right: 10px; bottom: 9px; font-size: 13px; }
 .screenshot-shell { overflow: hidden; border: 1px solid rgb(255 255 255 / 90%); border-radius: 8px; box-shadow: 0 17px 35px -18px #306bb070, 0 2px 7px #2460a012; }
-.screenshot-shell img { width: 100%; aspect-ratio: 864 / 514; object-fit: cover; object-position: top left; }
+.screenshot-shell img { width: 100%; aspect-ratio: 863 / 514; object-fit: cover; object-position: top left; }
 .preview-caption { position: absolute; left: 22px; bottom: 15px; font-size: 10px; letter-spacing: .3px; color: #7692af; }
 .preview-watermark { position: absolute; right: 21px; bottom: 16px; font-size: 7px; color: #9aafc5; letter-spacing: 1.2px; }
 .preview-bottomline { margin-top: 15px; display: flex; justify-content: space-between; align-items: center; gap: 15px; }
@@ -160,7 +160,7 @@ a.card-bottom:hover { color: var(--blue); }
 .live-badge > .status-dot { width: 5px; height: 5px; }
 .online-image-heading > .icon { color: #99b6d5; width: 18px; height: 18px; }
 .online-image-shell { overflow: hidden; border: 1px solid #fff; border-radius: 8px; box-shadow: 0 15px 30px -18px #3169ab55; transform: rotate(1deg); }
-.online-image-shell img { width: 100%; aspect-ratio: 864 / 514; object-fit: cover; object-position: top left; }
+.online-image-shell img { width: 100%; aspect-ratio: 863 / 514; object-fit: cover; object-position: top left; }
 .online-quote { display: flex; align-items: center; position: relative; gap: 15px; margin-top: 24px; padding: 2px 8px 0; }
 .quote-mark { font-family: Georgia, serif; font-size: 66px; line-height: .8; color: #b5d1ef; align-self: flex-start; }
 .online-quote > p { font-size: 15px; line-height: 1.7; color: #7f9cbc; letter-spacing: 1px; }
