@@ -1,0 +1,13 @@
+{
+  "name": "pcl-re-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A minimal, carefully crafted Chinese landing page for PCL Re.",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/server.mjs",
+    "start": "node scripts/server.mjs",
+    "check": "node --check script.js && node --check scripts/server.mjs && node --check scripts/build.mjs",
+    "build": "node scripts/build.mjs"
+  }
+}

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7fbff" />
+    <meta name="description" content="PCL Re，面向 Windows 的 Minecraft 启动器。下载游戏版本、管理 Mod、光影和整合包，用邀请码和朋友一起联机。" />
+    <meta property="og:title" content="PCL Re — 你的方块世界，从这里开始。" />
+    <meta property="og:description" content="游戏版本下载，Mod、光影与整合包管理，还有和朋友一起玩的联机体验。" />
+    <meta property="og:type" content="website" />
+    <title>PCL Re — 你的方块世界，从这里开始。</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="preload" as="image" href="./assets/pcl-launch-home.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <defs>
+        <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" /></symbol>
+        <symbol id="i-external" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10" /></symbol>
+        <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-4-4 4 4 4-4M4 16v4h16v-4" /></symbol>
+        <symbol id="i-cube" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Zm-9 5v9l9 5 9-5V8m-9 5v9" /></symbol>
+        <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 10 5-10 5L2 8l10-5Zm-9 10 9 5 9-5M3 18l9 5 9-5" /></symbol>
+        <symbol id="i-mod" viewBox="0 0 24 24"><path d="M9 3H4a1 1 0 0 0-1 1v5h2a3 3 0 0 1 0 6H3v5a1 1 0 0 0 1 1h5v-2a3 3 0 0 1 6 0v2h5a1 1 0 0 0 1-1v-5h-2a3 3 0 0 1 0-6h2V4a1 1 0 0 0-1-1h-5v2a3 3 0 0 1-6 0V3Z" /></symbol>
+        <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" /><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5" /></symbol>
+        <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3" /><path d="M3 21v-3a6 6 0 0 1 12 0v3m2-16a3 3 0 0 1 0 6m2 10v-3a6 6 0 0 0-3-5" /></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" /></symbol>
+        <symbol id="i-windows" viewBox="0 0 24 24"><path d="m3 5 8-1v7H3V5Zm10-1.3L22 2.5V11h-9V3.7ZM3 13h8v7l-8-1v-6Zm10 0h9v8.5l-9-1.2V13Z" fill="currentColor" stroke="none" /></symbol>
+        <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.69-.22.69-.48v-1.86c-2.78.6-3.37-1.18-3.37-1.18-.46-1.16-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.52 1.02 1.52 1.02.89 1.53 2.33 1.09 2.9.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.6 9.6 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.76c0 .27.18.57.69.48A10 10 0 0 0 12 2Z" fill="currentColor" stroke="none" /></symbol>
+      </defs>
+    </svg>
+    <a class="skip-link" href="#main">跳转到主要内容</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#overview" aria-label="PCL Re 首页"><img src="./assets/favicon.svg" alt="" width="34" height="34" /><span>PCL <span class="brand-re">Re</span><span class="brand-dot">.</span></span></a>
+        <nav class="desktop-nav" aria-label="主导航">
+          <a class="nav-link is-active" href="#overview" aria-current="location">概览</a>
+          <a class="nav-link" href="#features">功能</a>
+          <a class="nav-link" href="#multiplayer">一起联机</a>
+          <a class="nav-link" href="#faq">常见问题</a>
+        </nav>
+        <div class="header-actions">
+          <a class="github-link" href="https://github.com/HentaiX2007/PCL-Web" target="_blank" rel="noopener noreferrer" aria-label="网站 GitHub 源码（新窗口）"><svg class="icon"><use href="#i-github" /></svg></a>
+          <a class="button button-small button-primary" href="https://1812315447.share.123pan.cn/123pan/Bda8Vv-eUuY3" target="_blank" rel="noopener noreferrer">立即下载 <svg class="icon" aria-hidden="true"><use href="#i-download" /></svg></a>
+          <button class="menu-toggle" type="button" aria-label="展开导航菜单" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button>
+        </div>
+      </div>
+      <nav class="mobile-nav" id="mobile-nav" aria-label="移动端导航" hidden><a href="#overview">概览</a><a href="#features">功能</a><a href="#multiplayer">一起联机</a><a href="#faq">常见问题</a><a href="https://github.com/HentaiX2007/PCL-Web" target="_blank" rel="noopener noreferrer">网站源码 ↗</a></nav>
+    </header>
+
+    <main id="main">
+      <div class="hero-wash">
+        <section class="hero container" id="overview" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="status-dot"></span> MINECRAFT LAUNCHER, REIMAGINED</p>
+            <h1 id="hero-title">你的方块世界，<br /><span>从这里开始。</span></h1>
+            <p class="hero-description">PCL Re，一个让冒险轻松开始的 Minecraft 启动器。<br class="wide-break" />下载游戏，管理 Mod、光影与整合包，<br class="wide-break" />再邀请朋友，一起走进下一段旅程。</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="https://1812315447.share.123pan.cn/123pan/Bda8Vv-eUuY3" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-windows" /></svg>下载 PCL Re <svg class="icon action-arrow" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+              <a class="text-link" href="#features">看看它能做什么 <span aria-hidden="true">↗</span></a>
+            </div>
+            <p class="hero-note"><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> 适用于 Windows <span>·</span> 基于 PCL 2 开源代码</p>
+          </div>
+          <div class="hero-visual">
+            <div class="preview-topline"><span><span class="status-dot"></span> 熟悉的简洁，全新的出发</span><span class="mono">PCL RE / 01</span></div>
+            <div class="preview-stage">
+              <span class="stage-plus plus-one" aria-hidden="true">+</span><span class="stage-plus plus-two" aria-hidden="true">+</span>
+              <div class="screenshot-shell" id="launcher-preview" role="tabpanel" aria-labelledby="preview-tab-home"><img id="preview-image" src="./assets/pcl-launch-home.png" width="864" height="514" fetchpriority="high" alt="PCL Re 启动主页：游戏登录、启动游戏、版本选择和版本设置" /></div>
+              <span class="preview-caption" id="preview-caption" aria-live="polite">每一场冒险，从一次启动开始。</span>
+              <span class="preview-watermark mono" aria-hidden="true">READY TO PLAY.</span>
+            </div>
+            <div class="preview-bottomline"><div class="preview-tabs" role="tablist" aria-label="切换启动器真实界面"><button id="preview-tab-home" class="preview-tab is-active" role="tab" type="button" aria-selected="true" aria-controls="launcher-preview" data-preview="home">启动</button><button id="preview-tab-versions" class="preview-tab" role="tab" type="button" aria-selected="false" aria-controls="launcher-preview" tabindex="-1" data-preview="versions">版本</button><button id="preview-tab-online" class="preview-tab" role="tab" type="button" aria-selected="false" aria-controls="launcher-preview" tabindex="-1" data-preview="online">联机</button></div><span class="real-preview-label">来自启动器的真实界面 <span aria-hidden="true">↗</span></span></div>
+          </div>
+        </section>
+      </div>
+
+      <div class="capabilities container" aria-label="核心功能"><span class="capabilities-intro">从原版，到无限可能。</span><span><svg class="icon" aria-hidden="true"><use href="#i-download" /></svg>游戏版本下载</span><span><svg class="icon" aria-hidden="true"><use href="#i-mod" /></svg>Mod 与光影</span><span><svg class="icon" aria-hidden="true"><use href="#i-layers" /></svg>整合包管理</span><span><svg class="icon" aria-hidden="true"><use href="#i-users" /></svg>好友联机</span></div>
+
+      <section class="features container section" id="features" aria-labelledby="features-title">
+        <div class="section-heading"><div><p class="section-kicker"><span>01 /</span> PLAY IT YOUR WAY</p><h2 id="features-title">少一点准备，<span>多一点好玩。</span></h2></div><p>原版的纯粹，模组的丰富，光影的惊艳。<br />你喜欢的玩法，都有一个顺手的开始。</p></div>
+        <div class="feature-grid">
+          <article class="feature-card feature-versions"><div class="card-topline"><span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-download" /></svg></span><span class="mono">01 / GAME VERSIONS</span></div><h3>想玩的版本，<br />随时出发。</h3><p>浏览、下载 Minecraft 游戏版本，安装 Forge、NeoForge 或 Fabric。在版本管理里切换你的下一站。</p><div class="version-art" aria-hidden="true"><div class="version-row"><span class="version-cube"><svg class="icon"><use href="#i-cube" /></svg></span><div><strong>Minecraft</strong><small>原版世界，准备就绪</small></div><span class="version-check">✓</span></div><div class="loader-tags"><span>Forge</span><span>NeoForge</span><span>Fabric</span></div></div><a class="card-bottom" href="#overview" data-show-preview="versions">查看版本管理界面 <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></a></article>
+          <article class="feature-card feature-mods"><div class="card-topline"><span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-mod" /></svg></span><span class="mono">02 / MODS & SHADERS</span></div><h3>给熟悉的世界，<br />加一点新意。</h3><p>搜索、下载和管理 Mod 与光影，也能发现资源包与数据包。新的玩法、新的风景，由你搭配。</p><div class="mods-art" aria-hidden="true"><span class="resource-tile tile-mod"><svg class="icon"><use href="#i-mod" /></svg><small>MOD</small></span><span class="resource-tile tile-shader"><svg class="icon"><use href="#i-sun" /></svg><small>SHADER</small></span><span class="resource-tile tile-pack"><svg class="icon"><use href="#i-layers" /></svg><small>RESOURCE</small></span><span class="art-plus">+</span></div><span class="card-bottom">Mod · 光影包 · 资源包 · 数据包 <svg class="icon" aria-hidden="true"><use href="#i-check" /></svg></span></article>
+          <article class="feature-card feature-packs"><div class="card-topline"><span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-layers" /></svg></span><span class="mono">03 / MODPACKS</span></div><h3>一整个新世界，<br />一起装进口袋。</h3><p>下载、导入与管理整合包，从现成的搭配开始冒险。轻松切换不同的游戏实例，把喜欢的世界留在身边。</p><div class="packs-art" aria-hidden="true"><span class="pack-sheet sheet-back"></span><span class="pack-sheet sheet-middle"></span><span class="pack-sheet sheet-front"><svg class="icon"><use href="#i-cube" /></svg><span>YOUR NEXT WORLD</span><small>READY TO EXPLORE</small></span><span class="pack-spark">✧</span></div><span class="card-bottom">在线下载，也支持本地导入 <svg class="icon" aria-hidden="true"><use href="#i-check" /></svg></span></article>
+        </div>
+      </section>
+
+      <section class="multiplayer container section" id="multiplayer" aria-labelledby="multiplayer-title">
+        <div class="multiplayer-panel">
+          <div class="multiplayer-copy"><p class="section-kicker"><span>02 /</span> BETTER WITH FRIENDS</p><h2 id="multiplayer-title">好玩的世界，<br /><span>当然要一起。</span></h2><p>从一个人的生存，到一群人的冒险。<br />PCL Re 内置联机入口，用邀请码把朋友带进来。</p><ol class="online-steps"><li><span>01</span><div><strong>创建房间</strong><p>进入「联机」，由房主创建联机房间。</p></div></li><li><span>02</span><div><strong>分享邀请码</strong><p>把房间的邀请码发送给一起玩的朋友。</p></div></li><li><span>03</span><div><strong>加入，一起玩</strong><p>好友输入邀请码加入，开启共同的冒险。</p></div></li></ol><p class="online-note">创建联机房间时，需要以管理员身份运行启动器。</p></div>
+          <div class="multiplayer-visual"><div class="online-image-heading"><span class="live-badge"><span class="status-dot"></span> ADVENTURE, TOGETHER</span><svg class="icon" aria-hidden="true"><use href="#i-users" /></svg></div><div class="online-image-shell"><img src="./assets/pcl-launch-online.png" alt="PCL Re 联机页面，包含创建联机房间和输入邀请码加入房间的入口" width="864" height="514" loading="lazy" /></div><div class="online-quote"><span class="quote-mark" aria-hidden="true">“</span><p>同一个世界，<br />多几份快乐。</p><span class="quote-cubes" aria-hidden="true"><svg class="icon"><use href="#i-cube" /></svg><svg class="icon"><use href="#i-cube" /></svg></span></div></div>
+        </div>
+      </section>
+
+      <section class="faq container section" id="faq" aria-labelledby="faq-title"><div class="faq-heading"><p class="section-kicker"><span>03 /</span> BEFORE YOU PLAY</p><h2 id="faq-title">出发前，<br /><span>你可能想知道。</span></h2><p>关于启动器的几个小问题，<br />在这里找到答案。</p></div><div class="faq-items"><details open><summary>PCL Re 是什么？<span class="faq-toggle" aria-hidden="true"></span></summary><p>PCL Re 是基于 PCL 2 开源代码的第三方 Minecraft 启动器，面向 Windows。它提供游戏版本下载与管理、Mod / 光影 / 整合包的下载与管理，以及好友联机等功能。</p></details><details><summary>可以下载游戏版本和整合包吗？<span class="faq-toggle" aria-hidden="true"></span></summary><p>可以。在启动器的「下载」页面选择 Minecraft 游戏版本，或搜索并下载整合包；已有的本地整合包也可以导入使用。</p></details><details><summary>可以管理 Mod 和光影吗？<span class="faq-toggle" aria-hidden="true"></span></summary><p>可以。你可以在启动器中搜索、下载和管理 Mod 与光影包，也能下载资源包和数据包。选择时请留意资源适用的游戏版本及所需的加载器。</p></details><details><summary>怎么和朋友联机？<span class="faq-toggle" aria-hidden="true"></span></summary><p>在「联机」页面创建房间，并把邀请码分享给朋友；朋友输入邀请码即可加入房间。创建房间需要管理员权限。一起游玩前，请确认双方使用的游戏版本和 Mod 配置相符。</p></details><details><summary>在哪里下载 PCL Re？支持什么系统？<span class="faq-toggle" aria-hidden="true"></span></summary><p>点击页面上的「下载 PCL Re」或「立即下载」，即可前往 <a href="https://1812315447.share.123pan.cn/123pan/Bda8Vv-eUuY3" target="_blank" rel="noopener noreferrer">123 云盘下载页 ↗</a> 获取 Windows 版本。使用前请查看下载页中的文件和相关说明。</p></details><details><summary>启动器包含 Minecraft 游戏授权吗？<span class="faq-toggle" aria-hidden="true"></span></summary><p>不包含。PCL Re 是启动和管理游戏的工具，不提供 Minecraft 游戏授权。请使用你自己的游戏账号，并遵守游戏的使用条款。</p></details></div></section>
+
+      <section class="closing container" aria-labelledby="closing-title"><div class="closing-grid" aria-hidden="true"></div><span class="closing-star" aria-hidden="true">✳</span><p class="section-kicker">YOUR NEXT WORLD IS WAITING</p><h2 id="closing-title">下一段冒险，<span>现在开始。</span></h2><p class="closing-description">带上你的想象，剩下的交给 PCL Re。</p><a class="button button-primary" href="https://1812315447.share.123pan.cn/123pan/Bda8Vv-eUuY3" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-windows" /></svg>下载 PCL Re <svg class="icon action-arrow" aria-hidden="true"><use href="#i-arrow" /></svg></a><span class="closing-footnote">Windows · 前往 123 云盘下载</span></section>
+    </main>
+
+    <footer class="site-footer container"><div class="footer-top"><a class="brand footer-brand" href="#overview"><img src="./assets/favicon.svg" alt="" width="29" height="29" /><span>PCL <span class="brand-re">Re</span><span class="brand-dot">.</span></span></a><p>让启动简单，让冒险继续。</p><div class="footer-links"><a href="https://github.com/HentaiX2007/PCL-Web" target="_blank" rel="noopener noreferrer">网站源码 <span aria-hidden="true">↗</span></a><a href="https://github.com/HentaiX2007/PCL-Web/issues" target="_blank" rel="noopener noreferrer">网站反馈 <span aria-hidden="true">↗</span></a><a href="#overview">回到顶部 ↑</a></div></div><div class="footer-bottom"><p>© <span id="copyright-year">2026</span> PCL Re</p><p>基于 PCL 2 开源代码的第三方分支，与 PCL 原作者无隶属关系。<br class="footer-break" />本站非 Minecraft 官方网站，与 Mojang Studios 或 Microsoft 无关联。</p><span class="footer-signature"><span class="status-dot"></span> MADE FOR THE NEXT ADVENTURE.</span></div></footer>
+  </body>
+</html>
