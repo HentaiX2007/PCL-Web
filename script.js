@@ -20,12 +20,37 @@ const previewImage = document.querySelector('#preview-image');
 const previewPanel = document.querySelector('#launcher-preview');
 const previewCaption = document.querySelector('#preview-caption');
 const previewTabs = [...document.querySelectorAll('[data-preview]')];
+let previewSwapId = 0;
 
 function selectPreview(name) {
   const preview = previews[name];
   if (!preview) return;
-  previewImage.src = preview.src;
-  previewImage.alt = preview.alt;
+  const imageChanged = previewImage.getAttribute('src') !== preview.src;
+  const shouldAnimate = imageChanged && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const swapId = ++previewSwapId;
+  const showImage = () => {
+    if (swapId !== previewSwapId) return;
+    requestAnimationFrame(() => {
+      if (swapId === previewSwapId) previewPanel.classList.remove('is-swapping');
+    });
+  };
+
+  if (shouldAnimate) {
+    previewPanel.classList.add('is-swapping');
+    window.setTimeout(() => {
+      if (swapId !== previewSwapId) return;
+      previewImage.src = preview.src;
+      previewImage.alt = preview.alt;
+      if (typeof previewImage.decode === 'function') previewImage.decode().then(showImage, showImage);
+      else if (previewImage.complete) showImage();
+      else previewImage.addEventListener('load', showImage, { once: true });
+    }, 180);
+  } else {
+    previewPanel.classList.remove('is-swapping');
+    previewImage.src = preview.src;
+    previewImage.alt = preview.alt;
+  }
+
   previewCaption.textContent = preview.caption;
   previewPanel.setAttribute('aria-labelledby', `preview-tab-${name}`);
   previewTabs.forEach((tab) => {
@@ -108,3 +133,18 @@ window.addEventListener('scroll', () => {
   window.requestAnimationFrame(updateActiveNav);
 }, { passive: true });
 updateActiveNav();
+
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+  const revealTargets = document.querySelectorAll('.section-heading, .feature-card, .multiplayer-copy, .multiplayer-visual, .faq-heading, .faq-items details, .closing');
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -24px 0px' });
+  revealTargets.forEach((target) => {
+    target.classList.add('motion-pending');
+    revealObserver.observe(target);
+  });
+}
