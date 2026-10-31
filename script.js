@@ -1,13 +1,13 @@
 const previews = Object.freeze({
   home: {
     src: './assets/pcl-launch-home.png',
-    alt: 'PCL Re 启动主页：游戏登录、启动游戏、版本选择和版本设置',
+    alt: 'PCL Re 启动主页：玩家名已遮挡，展示启动游戏、当前游戏版本、公告和版本设置',
     caption: '每一场冒险，从一次启动开始。',
   },
   versions: {
     src: './assets/pcl-launch-versions.png',
-    alt: 'PCL Re 版本管理页面，展示游戏版本列表与管理入口',
-    caption: '熟悉的版本，新鲜的冒险。',
+    alt: 'PCL Re 游戏下载页面：加载后展示 Minecraft 最新正式版 26.3 和预览版 26.4-snapshot-6',
+    caption: '游戏版本与社区资源，加载就绪。',
   },
   online: {
     src: './assets/pcl-launch-online.png',
